@@ -1,0 +1,13 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	padding: 3rem 0;
+}
+ol {
+	padding-left: 1rem;
+}

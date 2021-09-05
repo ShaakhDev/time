@@ -1,0 +1,24 @@
+{
+  "name": "time_distribution_app",
+  "version": "1.0.0",
+  "description": "TIME DISTRIBUTION APP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShaakhDev/time.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ShaakhDev/time/issues"
+  },
+  "homepage": "https://github.com/ShaakhDev/time#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.4"
+  }
+}
