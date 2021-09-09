@@ -11,13 +11,16 @@
 
 <body>
     <div class="container">
-        <input id="input" type="text">
-        <button id="submit" type="submit">Qo'shish</button><br>
+
+        <input id="input" type="text" required>
+
         <input id="start-time" type="time">
         <input id="end-time" type="time">
-        <button id="time-btn">time</button>
-        <button id="clear" class="clear-storage">clear storage</button>
+        <button id="submit" type="submit">Qo'shish</button><br>
 
+        <button id="time-btn">time</button>
+        <button id="clear" class="clear-storage">clear db</button>
+        <button id="get-users">get users</button>
         <div class="user-list-container">
             <ol class="user-list" id="user-list">
 
@@ -25,7 +28,7 @@
         </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="client.js"></script>
 </body>
 
 </html>
