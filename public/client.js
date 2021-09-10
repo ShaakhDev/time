@@ -12,14 +12,65 @@ var idCount = 1;
 
 
 
-
 addUserbtn.addEventListener('click', () => {
     addUser()
 })
 
 
+getUsers.addEventListener('click', () => {
+    fetch('/all')
+        .then(res => res.json())
+        .then(data => {
+            let users = [...data];
+            users.map((el, ind) => {
+                let { id, name } = el;
+                users[ind] = { id, name };
+
+            })
+            // console.log(users);
+            addingTimesToUsers(users);
+        })
+        .catch(err => console.log(err))
+})
 
 
+//**********************************  Adding time to users   ************************************* */
+function addingTimesToUsers(users) {
+    let totalTime = getTimeDifference(startTime.value, endTime.value);
+    let limitForOnePerson = Math.floor(totalTime[0] / users.length);
+    let start = startTime.value;
+    start = start.split(':').map((el) => parseInt(el));
+    // start = parseInt(start)
+    let end = calculateEndTime(start, limitForOnePerson);
+    generateTimeToHtml(start, end, limitForOnePerson, users);
+    console.log(start, end, limitForOnePerson)
+    // console.log(users, limitForOnePerson)
+}
+
+
+function calculateEndTime(start, limit) {
+    let qoldiq = (start[1] + limit) - 60
+    if (qoldiq >= 0) {
+        return [start[0] + 1, qoldiq];
+    }
+    else {
+        return [start[0], start[1] + limit]
+    }
+}
+
+
+function generateTimeToHtml(start, end, limit, users) {
+    let generatedHTML = "";
+    users.map(el => {
+        generatedHTML += `
+            <li>${el.name}<span>${start[0] + ":" + start[1] + "-" + end[0] + ":" + end[1]}</span></li>
+        `
+        start = [...end];
+        end = calculateEndTime(start, limit);
+    })
+    userList.innerHTML = generatedHTML;
+}
+//**************************************************************************************************** */
 function addUser() {
     if (input.value !== "") {
         let li = document.createElement('li');
@@ -57,11 +108,6 @@ function addUser() {
 
 }
 
-
-function fetchGetUsers() {
-
-}
-
 // ***************************************** clear database  ***********************************************/
 
 clearbtn.addEventListener("click", () => {
@@ -88,11 +134,9 @@ function getTimeDifference(start, end) {
     var endDate = new Date(2021, 8, 5, e[0], e[1], 0)
     var dif = endDate.getTime() - startDate.getTime()
     var minutes = Math.floor(dif / 1000 / 60)
-    console.log(minutes);
-
+    console.log(minutes, start)
+    return [minutes, start];
 }
-time.addEventListener('click', () => {//bu funksiya faqat konsolga minutni chiqarish uchun
-    getTimeDifference(startTime.value, endTime.value)
-})
+
 
 //******************************************************************************************** */

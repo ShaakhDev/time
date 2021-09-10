@@ -45,11 +45,28 @@ app.post('/adduser', (req, res) => {
 //     res.sendFile(__dirname + 'index.html');
 // })
 
+app.get('/all', (req, res) => {
+    if (req) {
+        User.db.collection('users')
 
+            .find()
+            .sort({ id: 1 })
+            .toArray((err, result) => {
+                if (err) return console.log(err)
+                res.send(result)
+
+            })
+    }
+})
 
 app.delete('/clear', (req, res) => {
-    User.collection.drop();
-    res.sendStatus(201);
+    try {
+        User.db.dropCollection('users');
+        res.sendStatus(201);
+    } catch (err) {
+        console.log(err);
+    }
+
 })
 
 app.listen(8080, () => {
