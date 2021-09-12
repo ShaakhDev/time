@@ -12,12 +12,9 @@ require('dotenv').config();
 const dotenv = require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-console.log(dotenv.parsed)
 
-mongoose.connect(process.env.MONGODB_URI, {
 
-    useUnifiedTopology: true
-})
+mongoose.connect(process.env.MONGODB_URI, { useUnifiedTopology: true })
     .then(() => {
         console.log('Mongodb ga ulanish hosil qilindi');
     })
