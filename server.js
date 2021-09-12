@@ -68,6 +68,8 @@ app.delete('/clear', (req, res) => {
     }
 });
 
-app.listen(8080, () => {
-    console.log('Server 8080 chi portni eshitishni boshladi...');
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+    console.log(`Server ${PORT} chi portni eshitishni boshladi...`);
 });
