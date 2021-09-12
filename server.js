@@ -9,11 +9,15 @@
 
 console.log('Server_side_code_running')
 require('dotenv').config();
+const dotenv = require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const MONGODB_URI = 'mongodb+srv://ShaakhDev:palinDrom7389@newcluster.fft1o.mongodb.net/test';
+console.log(dotenv.parsed)
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/time", { useUnifiedTopology: true },)
+mongoose.connect(process.env.MONGODB_URI, {
+
+    useUnifiedTopology: true
+})
     .then(() => {
         console.log('Mongodb ga ulanish hosil qilindi');
     })
