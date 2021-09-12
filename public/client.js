@@ -124,7 +124,7 @@ function generateTimeToHtml(start, end, limit, users) {
             <li>${el.name}<span>${(start[0] < 10 ? "0" + start[0] : start[0]) + ":" + (start[1] < 10 ? "0" + start[1] : start[1]) + "-" + (end[0] < 10 ? "0" + end[0] : end[0]) + ":" + (end[1] < 10 ? "0" + end[1] : end[1])}</span></li>
         `
         start = [...end];
-        if (el.id == dataExtra[index].id - 1) {
+        if (el.id == (dataExtra[index].id - 1)) {
             end = calculateEndTime(start, (limit + parseInt(dataExtra[index].extraTime)));
             if (index < dataExtra.length - 1) {
                 index++;
