@@ -10,8 +10,9 @@
 console.log('Server_side_code_running')
 const express = require('express');
 const mongoose = require('mongoose');
+const MONGODB_URI = 'mongodb+srv://ShaakhDev:palinDrom7389@newcluster.fft1o.mongodb.net/test';
 
-mongoose.connect("mongodb://localhost:27017/time", { useUnifiedTopology: true },)
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/time", { useUnifiedTopology: true },)
     .then(() => {
         console.log('Mongodb ga ulanish hosil qilindi');
     })
