@@ -1,13 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Tenor+Sans&display=swap");
+:root {
+	--font: "Tenor Sans", sans-serif;
+	--font2: "Josefin sans", sans-serif;
+}
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: var(--font);
+}
+body {
+	background-color: #102027;
+	color: #eceff1;
+	padding: 2rem 0;
 }
 .container {
-	width: 90%;
-	margin: 0 auto;
-	padding: 3rem 0;
+	width: 100%;
+	margin: 5vh 0 0;
+	padding: 1rem;
+	height: 100%;
+	background-color: #37474f;
 }
 ol {
 	padding-left: 1rem;
+}
+body .heading {
+	font-size: 24px;
+	text-align: center;
+	padding: 0 1rem;
+	padding-bottom: 0;
+}
+input {
+	background: transparent;
+	border: 1px solid #eceff1;
+	color: #eceff1;
+	outline: none;
+	padding: 5px 2px;
+	border-radius: 3px;
+	margin: 5px 0;
+}
+input[type="time"] {
+	width: 90px;
+	padding: 5px;
+}
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+	display: flex;
+	align-items: center;
+}
+input[type="time"]::-webkit-datetime-edit-text {
+	padding: 2px 2px;
+}
+.id-of-user,
+.time-for-user,
+.peregon {
+	width: 60px;
+	font-size: 12px;
+	padding: auto 8px;
+}
+.id-of-user::placeholder,
+.time-for-user::placeholder,
+.peregon::placeholder {
+	color: #eceff19f;
+}
+.user-list-container .user-list-heading {
+	text-align: center;
+	font-size: 18px;
+	padding: 10px;
+}
+.btn {
+	background: #eceff1;
+	color: #37474f;
+	border: 1px solid #37474f;
+	padding: 5px 20px;
+	border-radius: 5px;
+	margin: 10px 0;
+}
+ol li span {
+	background: #eceff1;
+	color: #37474f;
+	float: right;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 1rem;
+	border-radius: 5px;
+	padding: 1px 5px;
+	width: 100px;
+	height: 30px;
+}
+ol li {
+	line-height: 42px;
 }
