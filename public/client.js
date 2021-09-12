@@ -57,8 +57,8 @@ function addUser() {
 
 function createObjectForExtraTime() {//this function take data from input about extra time takers.
     let obj = {};
-    obj.id = Number(idOfUserForExtra.value);
-    obj.extraTime = Number(extraTimeForUser.value);
+    obj.id = idOfUserForExtra.value;
+    obj.extraTime = extraTimeForUser.value;
     return obj;
 }
 
