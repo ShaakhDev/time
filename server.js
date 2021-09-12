@@ -8,6 +8,7 @@
 /////////////////////////////////////////////////////////////////////////////// 
 
 console.log('Server_side_code_running')
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const MONGODB_URI = 'mongodb+srv://ShaakhDev:palinDrom7389@newcluster.fft1o.mongodb.net/test';
