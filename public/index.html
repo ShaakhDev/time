@@ -11,22 +11,25 @@
 
 <body>
     <div class="container">
-        <label for="input">Enter user:</label>
-        <input id="input" type="text" required><br>
-        <label for="start-time">Start time:</label>
+        <label for="user-input">Foydalanuvchi nomini kiriting:</label>
+        <input class="user-input" id="userInput" type="text" required><br>
+        <button class="submit btn" id="submit" type="submit">Jo'natish</button><br><br>
+        <label for="extra-time">Peregon vaqti uchun foydalanuvchi ID si va kerakli vaqtni kiriting</label><br>
+        <input class="id-of-user" id="id-of-user" type="number" placeholder="ID"><br>
+        <input class="time-for-user" id="time-for-user" type="number" placeholder="Minutlar"><br>
+        <label for="peregon">Umumiy peregon vaqtini kiriting:</label>
+        <input class="peregon" id="peregon" type="number" class="peregon" value="60"><br>
+        <label for="start-time">Navbatning boshlanish vaqti:</label>
         <input id="start-time" type="time"><br>
-        <label for="end-time">End time:</label>
+        <label for="end-time">Navbatning tugash vaqti:</label>
         <input id="end-time" type="time"><br>
-        <button id="submit" type="submit">Submit</button><br><br>
-        <button id="clear" class="clear-storage">clear db</button>
-        <button id="get-users">get users</button>
+        <button class="clear-db btn" id="clear-db" class="clear-db">Databazani tozalash</button>
+        <button class="get-users btn" id="get-users">Natijani olish</button>
         <div class="user-list-container">
-            <ol class="user-list" id="user-list">
-
-            </ol>
+            <p>Foydalanuvchilar ro'yxati va ularning navbati vaqtlari.</p>
+            <ol id="user-list" class="user-list"></ol>
         </div>
     </div>
-
     <script src="client.js"></script>
 </body>
 
