@@ -145,6 +145,7 @@ function generateTimeToHtml(start, end, limit, users) {
                 end = calculateEndTime(start, limit);
             }
         })
+        document.querySelector('.user-list-heading').innerHTML = "Foydalanuvchilar ro'yxati va ularning navbati vaqtlari."
         userList.innerHTML = generatedHTML;
     }
 }

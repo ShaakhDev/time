@@ -20,6 +20,11 @@ body {
 	padding: 1rem;
 	height: 100%;
 	background-color: #37474f;
+	display: flex;
+	justify-content: center;
+}
+.main-content {
+	width: 0 auto;
 }
 ol {
 	padding-left: 1rem;
