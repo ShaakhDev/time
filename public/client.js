@@ -56,10 +56,15 @@ function addUser() {
 
 
 function createObjectForExtraTime() {//this function take data from input about extra time takers.
-    let obj = {};
-    obj.id = idOfUserForExtra.value;
-    obj.extraTime = extraTimeForUser.value;
-    return obj;
+    if (idOfUserForExtra.value !== "" && extraTimeForUser !== "") {
+
+        let obj = {};
+        obj.id = idOfUserForExtra.value;
+        obj.extraTime = extraTimeForUser.value;
+        return obj;
+    }
+    alert('Peregon vaqti uchun foydalanuvchi ID si va kerakli vaqtni kiritish shart!!!')
+    return null;
 }
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@   GETTING USER'S DATA FROM  DB   @@@@@@@@@@@@@@@@@@@
@@ -116,24 +121,32 @@ var dataExtra = [];
 //this function generates all time data to each users and writes it to html
 function generateTimeToHtml(start, end, limit, users) {
     let item = createObjectForExtraTime();
-    dataExtra.push(item)
-    var index = 0;
-    let generatedHTML = "";
-    users.map((el) => {
-        generatedHTML += `
-            <li>${el.name}<span>${(start[0] < 10 ? "0" + start[0] : start[0]) + ":" + (start[1] < 10 ? "0" + start[1] : start[1]) + "-" + (end[0] < 10 ? "0" + end[0] : end[0]) + ":" + (end[1] < 10 ? "0" + end[1] : end[1])}</span></li>
-        `
-        start = [...end];
-        if (el.id == dataExtra[index].id - 1) {
-            end = calculateEndTime(start, (limit + parseInt(dataExtra[index].extraTime)));
-            if (index < dataExtra.length - 1) {
-                index++;
+    if (item === null) {
+        return null;
+    } else {
+
+        dataExtra.push(item)
+        var index = 0;
+        let generatedHTML = "";
+        users.map((el) => {
+            generatedHTML += `
+                <li>${el.name}<span>${(start[0] < 10 ? "0" + start[0] : start[0]) + ":" + (start[1] < 10 ? "0" + start[1] : start[1]) + "-" + (end[0] < 10 ? "0" + end[0] : end[0]) + ":" + (end[1] < 10 ? "0" + end[1] : end[1])}</span></li>
+            `
+            start = [...end];
+            console.log(Number(el.id) == Number(dataExtra[index].id) - 1 ? `ishlayapti  ${dataExtra[index].id - 1}` : `ishlamayapti  ${dataExtra[index].id}`)
+            if (Number(el.id) == Number(dataExtra[index].id) - 1) {
+                console.log('if shart ishladi')
+                end = calculateEndTime(start, (limit + Number(dataExtra[index].extraTime)));
+                if (index < dataExtra.length - 1) {
+                    console.log('index dataextrani lenghti -1 dan kichkina ');
+                    index++;
+                }
+            } else {
+                end = calculateEndTime(start, limit);
             }
-        } else {
-            end = calculateEndTime(start, limit);
-        }
-    })
-    userList.innerHTML = generatedHTML;
+        })
+        userList.innerHTML = generatedHTML;
+    }
 }
 
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CLEAR ALL USER'S DATA FROM DB   @@@@@@@@@@@@@@@@@@@@@@@@
