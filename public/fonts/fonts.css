@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(Tenor+Sans_400_normal.eot); /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Dg.eot */
+    src: local('☺'),
+        url(Tenor+Sans_400_normal.eot?#iefix) format('embedded-opentype'), /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Dg.eot */
+        url(Tenor+Sans_400_normal.woff2) format('woff2'), /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Cg.woff2 */
+        url(Tenor+Sans_400_normal.woff) format('woff'), /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4DA.woff */
+        url(Tenor+Sans_400_normal.ttf) format('truetype'), /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4D0-L2qM.ttf */
+        url(Tenor+Sans_400_normal.svg#Tenor+Sans_400_normal) format('svg'); /* http://fonts.gstatic.com/l/font?kit=bx6ANxqUneKx06UkIXISn3V4DQ&skey=9e159c41209dbf49&v=v12#TenorSans */
+}

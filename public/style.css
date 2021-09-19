@@ -1,13 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Tenor+Sans&display=swap");
-:root {
-	--font: "Tenor Sans", sans-serif;
-	--font2: "Josefin sans", sans-serif;
-}
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	font-family: var(--font);
+	font-family: "Tenor Sans", sans-serif;
 }
 body {
 	background-color: #102027;
