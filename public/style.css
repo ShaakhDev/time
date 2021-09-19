@@ -18,9 +18,6 @@ body {
 	display: flex;
 	justify-content: center;
 }
-.main-content {
-	width: 0 auto;
-}
 ol {
 	padding-left: 1rem;
 }
