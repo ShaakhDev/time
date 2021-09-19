@@ -36,15 +36,15 @@ input {
 	border-radius: 3px;
 	margin: 5px 0;
 }
-input[type="time"] {
+input.time {
 	width: 90px;
 	padding: 5px;
 }
-input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+input.time::-webkit-datetime-edit-fields-wrapper {
 	display: flex;
 	align-items: center;
 }
-input[type="time"]::-webkit-datetime-edit-text {
+input.time::-webkit-datetime-edit-text {
 	padding: 2px 2px;
 }
 .id-of-user,

@@ -2,8 +2,7 @@
 	font-family: "Tenor Sans";
 	font-style: normal;
 	font-weight: 400;
-
-	/* src: url(Tenor+Sans_400_normal.eot); http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Dg.eot */
+	src: url(Tenor+Sans_400_normal.eot); /*http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Dg.eot */
 	src: local("Tenor Sans"), local("Tenor-Sans"),
 		/*url(Tenor+Sans_400_normal.eot?#iefix) format('embedded-opentype'), /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Dg.eot */
 			url(Tenor+Sans_400_normal.woff2) format("woff2"); /* http://fonts.gstatic.com/s/tenorsans/v12/bx6ANxqUneKx06UkIXISn3V4Cg.woff2 */

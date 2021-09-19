@@ -7,16 +7,16 @@
 // ███████║██║  ██║██║  ██║██║  ██║██║  ██╗██║  ██║██████╔╝███████╗ ╚████╔╝  //
 // ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚══════╝  ╚═══╝   //
 ///////////////////////////////////////////////////////////////////////////////
-const userInput = document.querySelector('#user-input'),
-    addUserbtn = document.querySelector('#submit'),
-    idOfUserForExtra = document.querySelector('#id-of-user'),
-    extraTimeForUser = document.querySelector('#time-for-user'),
-    totalExtraMinutes = document.querySelector('#peregon'),
-    clearDB = document.querySelector("#clear-db"),
+const userInput = document.querySelector('.user-input'),
+    addUserbtn = document.querySelector('.submit'),
+    idOfUserForExtra = document.querySelector('.id-of-user'),
+    extraTimeForUser = document.querySelector('.time-for-user'),
+    totalExtraMinutes = document.querySelector('.peregon'),
+    clearDB = document.querySelector(".clear-db"),
     startTime = document.querySelector('#start-time'),
     endTime = document.querySelector("#end-time"),
-    getUsers = document.querySelector('#get-users'),
-    userList = document.querySelector('#user-list')
+    getUsers = document.querySelector('.get-users'),
+    userList = document.querySelector('.user-list')
 var idCount = 1;
 
 //eventListener for adding new user to db.>>>>
